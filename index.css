@@ -1,0 +1,41 @@
+@font-face {
+    font-family: PlusJakartaSans-reg;
+    src: url('font/PlusJakartaSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: PlusJakartaSans-bold;
+    src: url('font/PlusJakartaSans-Bold.ttf');
+}
+
+body {
+    margin: 0;
+    font-family: PlusJakartaSans-reg;
+    color: #272727;
+}
+
+.navbar {
+
+}
+
+#home {
+    margin: 20px;
+}
+
+.emoji{
+    margin: 0;
+    font-size: 30px;
+}
+
+H1 {
+    font-family: PlusJakartaSans-bold;
+}
+
+.line {
+    border: 1px solid #5c5b5b;
+}
+
+p {
+    color: #707070;
+    text-align: left;
+}
