@@ -8,14 +8,27 @@
     src: url('font/PlusJakartaSans-Bold.ttf');
 }
 
+b { font-family: PlusJakartaSans-bold; }
+
 body {
     margin: 0;
     font-family: PlusJakartaSans-reg;
     color: #272727;
+    background-color: white;
 }
 
-.navbar {
 
+.navbar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #707070;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #home {
@@ -27,15 +40,32 @@ body {
     font-size: 30px;
 }
 
-H1 {
-    font-family: PlusJakartaSans-bold;
-}
-
 .line {
-    border: 1px solid #5c5b5b;
+    border: 1px dashed #5c5b5b;
 }
 
 p {
     color: #707070;
     text-align: left;
+}
+
+.head-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px 20px 0px;
+}
+
+.head-title {
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.head-line {
+    margin: 10px 20px;
+    border: 1px solid #5c5b5b;
+}
+
+.content-about {
+    margin: 20px;
 }
