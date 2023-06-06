@@ -151,6 +151,27 @@ main {
 
 
 @media screen and (min-width: 1024px) {
+    .hamb_icon {
+        display: none;
+    }
+
+    .navbarhead {
+        border-bottom: 0;
+    }
+
+    .navbar {
+        flex-direction: row;
+        border-bottom: 1px solid #272727;
+        justify-content: space-between;
+    }
+
+    #navbar_menus {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        margin-right: 50px;
+    }
+
     .myphoto {
         display: block;
         width: 30vw;

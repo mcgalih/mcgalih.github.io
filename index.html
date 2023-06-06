@@ -10,36 +10,19 @@
 </head>
 <body>
     <div class="navbar">
-        <!-- <button onclick="myFunction()">Try it</button>
-
-        <div id="myDIV">
-            This is my DIV element.
-        </div>
-
-        <script>
-            function myFunction() {
-                var x = document.getElementById("myDIV");
-                if (x.style.display === "none") {
-                x.style.display = "block";
-                } else {
-                x.style.display = "none";
-                }
-            }
-        </script> -->
-        
         <div class="navbarhead">
             <div class="logo">Galih.</div>
-            <button onclick="toggle()" class="hamb_icon"><span class="hamb_line"></span></button>
+            <button onclick="toggle_hamb()" class="hamb_icon"><span class="hamb_line"></span></button>
             <!-- mode desktop coba hamb_icon displaynya hilangin,
             lalu flex direction untuk navbar dan navbar_menus ganti row-->
         </div>
         
         <div id="navbar_menus">
-            <a onclick="toggle()" href="#home">Home</a>
-            <a onclick="toggle()" href="#skillset">Skillsets</a>
-            <a onclick="toggle()" href="#projects">Projects</a>
-            <a onclick="toggle()" href="#about">About</a>
-            <a onclick="toggle()" href="#contact">Contact</a>
+            <a onclick="toggle_attr()" href="#home">Home</a>
+            <a onclick="toggle_attr()" href="#skillset">Skillsets</a>
+            <a onclick="toggle_attr()" href="#projects">Projects</a>
+            <a onclick="toggle_attr()" href="#about">About</a>
+            <a onclick="toggle_attr()" href="#contact">Contact</a>
         </div>
 
         <script src="js/navbarmenu.js"></script>
@@ -99,6 +82,5 @@
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos quos ipsam maxime in non mollitia maiores, hic ea magnam magni dolorem! Tempore omnis, quod cupiditate aspernatur autem ipsa doloremque eveniet!
 
     </main>
-    
 </body>
 </html>
