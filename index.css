@@ -17,19 +17,86 @@ body {
     background-color: white;
 }
 
-.content {
+main {
     margin-top: 40px;
     padding: 0px 7%;
 }
 
 .navbar {
     width: 100%;
-    position: sticky;
-    top: 0;
-    height: 50px;
-    box-sizing: border-box;
-    border-bottom: 1px solid #707070;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
     background-color: white;
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.navbarhead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #272727;
+}
+
+.logo {
+    color: #272727;
+    font-size: 30px;
+    margin-left: 25px;
+}
+
+.hamb_icon {
+    cursor: pointer;
+    background-color: white;
+    padding: 30px;
+    border: 0;
+}
+
+.hamb_line {
+    background-color: #272727;
+    display: block;
+    height: 3px;
+    position: relative;
+    width: 24px;
+}
+.hamb_line::before, .hamb_line::after{
+    background-color: #272727;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.hamb_line::before{
+    top: 8px;
+}
+.hamb_line::after{
+    top: -8px;
+}
+
+
+#navbar_menus {
+    display: none;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+
+#navbar_menus a {
+    padding: 20px;
+    text-decoration: none;
+    color: #272727;
+}
+
+#navbar_menus a:hover {
+    background-color: #FFC83D;
+}
+
+
+
+#home {
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -60,6 +127,10 @@ body {
     padding: 10px;
 }
 
+.myphoto {
+    display: none;
+}
+
 .head-container {
     display: flex;
     flex-direction: row;
@@ -76,4 +147,20 @@ body {
 
 .content-about {
     
+}
+
+
+@media screen and (min-width: 1024px) {
+    .myphoto {
+        display: block;
+        width: 30vw;
+        margin: 0px 60px;
+        border: 1px solid #272727;
+        border-radius: 40px;
+    }
+
+    .summary {
+        font-size: 20px;
+    }
+
 }

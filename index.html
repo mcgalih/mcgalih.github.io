@@ -10,19 +10,54 @@
 </head>
 <body>
     <div class="navbar">
-        Galih.
+        <!-- <button onclick="myFunction()">Try it</button>
+
+        <div id="myDIV">
+            This is my DIV element.
+        </div>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myDIV");
+                if (x.style.display === "none") {
+                x.style.display = "block";
+                } else {
+                x.style.display = "none";
+                }
+            }
+        </script> -->
+        
+        <div class="navbarhead">
+            <div class="logo">Galih.</div>
+            <button onclick="toggle()" class="hamb_icon"><span class="hamb_line"></span></button>
+            <!-- mode desktop coba hamb_icon displaynya hilangin,
+            lalu flex direction untuk navbar dan navbar_menus ganti row-->
+        </div>
+        
+        <div id="navbar_menus">
+            <a onclick="toggle()" href="#home">Home</a>
+            <a onclick="toggle()" href="#skillset">Skillsets</a>
+            <a onclick="toggle()" href="#projects">Projects</a>
+            <a onclick="toggle()" href="#about">About</a>
+            <a onclick="toggle()" href="#contact">Contact</a>
+        </div>
+
+        <script src="js/navbarmenu.js"></script>
     </div>
 
-    <div class="content">
+    <main>
         <div id="home">
-            <div class="emoji">&#128075;</div>
-            <h1 class="hello"><b>Hello, I'm Mochamad Galih Ramdhani</b></h1>
-            <p class="summary">I graduated from UIN Syarif Hidayatullah Jakarta majoring in Physics with a focus on Instrumentation Physics.
-                I have an understanding of hardware (computer and robot hardware) and software (Arduino, Python)
-                based on my experience in disassembling and designing hardware and also creating program algorithms.</p>
-            <a href="pdf/CV Galih.pdf" class="cv" download>
-                <b>📄 Download my CV</b>
-            </a>
+            <div class="home-desc">
+                <div class="emoji">&#128075;</div>
+                <h1 class="hello"><b>Hello, I'm Mochamad Galih Ramdhani</b></h1>
+                <p class="summary">I graduated from UIN Syarif Hidayatullah Jakarta majoring in Physics with a focus on Instrumentation Physics.
+                    I have an understanding of hardware (computer and robot hardware) and software (Arduino, Python)
+                    based on my experience in disassembling and designing hardware and also creating program algorithms.</p>
+                <a href="pdf/CV Galih.pdf" class="cv" download>
+                    <b>📄 Download my CV</b>
+                </a>
+            </div>
+            <img src="img/me.jpg" class="myphoto">
         </div>
         
         <div class="head-container" id="skillset">
@@ -34,7 +69,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ipsam debitis labore officia nulla veritatis unde repudiandae. Facilis neque illo unde molestiae, esse accusamus officiis enim nulla explicabo deserunt. Atque.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nesciunt mollitia laborum reiciendis natus nam est hic esse eius suscipit, veniam ab, neque dignissimos dolorum, culpa tempore repellendus tenetur voluptatum?
 
-    
+
         <div class="head-container" id="projects">
             <div class="emoji">📌</div>
             <div class="head-title"><b>Projects</b></div>
@@ -63,7 +98,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut illo vero voluptate, obcaecati reprehenderit numquam quisquam! Ipsum autem nisi modi inventore et consectetur, quod esse fuga aspernatur ex eum placeat?
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos quos ipsam maxime in non mollitia maiores, hic ea magnam magni dolorem! Tempore omnis, quod cupiditate aspernatur autem ipsa doloremque eveniet!
 
-    </div>
+    </main>
     
 </body>
 </html>
