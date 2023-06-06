@@ -42,15 +42,16 @@ main {
 }
 
 .logo {
-    color: #272727;
-    font-size: 30px;
-    margin-left: 25px;
+    box-sizing: border-box;
+    width: 100px;
+    margin-left: 10vw;
 }
 
 .hamb_icon {
     cursor: pointer;
     background-color: white;
     padding: 30px;
+    margin-right: 5vw;
     border: 0;
 }
 
@@ -83,13 +84,13 @@ main {
     background-color: whitesmoke;
 }
 
-#navbar_menus a {
+#navbar_menus > a {
     padding: 20px;
     text-decoration: none;
     color: #272727;
 }
 
-#navbar_menus a:hover {
+#navbar_menus > a:hover {
     background-color: #FFC83D;
 }
 
@@ -104,7 +105,7 @@ main {
 
 .emoji{
     margin: 0;
-    font-size: 30px;
+    font-size: 2em;
 }
 
 .hello {
@@ -141,7 +142,7 @@ main {
 }
 
 .head-title {
-    font-size: 20px;
+    font-size: 1.2em;
     margin-left: 15px;
 }
 
@@ -169,7 +170,7 @@ main {
         display: flex;
         flex-direction: row;
         background-color: white;
-        margin-right: 50px;
+        margin-right: 10vw;
     }
 
     .myphoto {
@@ -181,7 +182,7 @@ main {
     }
 
     .summary {
-        font-size: 20px;
+        font-size: 1.2em;
     }
 
 }

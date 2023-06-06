@@ -1,6 +1,6 @@
 function toggle_hamb() {
     let x = document.getElementById("navbar_menus");
-    if (x.style.display === "none") {
+    if (!x.style.display || x.style.display === "none") {
         x.style.display = "flex";
     } else {
         x.style.display = "none";
@@ -10,11 +10,11 @@ function toggle_hamb() {
 function toggle_attr() {
     let x = document.getElementById("navbar_menus");
     if (screen.matches) {
-        if (x.style.display !== "flex") {
+        if (!x.style.display || x.style.display !== "flex") {
             x.style.display = "flex";
         }
     } else {
-        if (x.style.display === "none") {
+        if (!x.style.display || x.style.display === "none") {
             x.style.display = "flex";
         } else {
             x.style.display = "none";
