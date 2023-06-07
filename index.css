@@ -94,8 +94,6 @@ main {
     background-color: #FFC83D;
 }
 
-
-
 #home {
     margin-top: 100px;
     display: flex;
@@ -150,8 +148,7 @@ main {
     
 }
 
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     .hamb_icon {
         display: none;
     }
@@ -170,6 +167,16 @@ main {
         display: flex;
         flex-direction: row;
         background-color: white;
+        margin-right: 6vw;
+    }
+
+    .summary {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #navbar_menus {
         margin-right: 10vw;
     }
 
@@ -181,8 +188,10 @@ main {
         border-radius: 40px;
     }
 
-    .summary {
-        font-size: 1.2em;
-    }
+}
 
+@media screen and (min-width: 1200px) {
+    .myphoto {
+        width: calc(30/100 * 1200px);
+    }
 }

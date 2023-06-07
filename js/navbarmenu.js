@@ -22,5 +22,5 @@ function toggle_attr() {
     }
 }
 
-var screen = window.matchMedia("(min-width: 1024px)")
+var screen = window.matchMedia("(min-width: 768px)")
 screen.addListener(toggle_attr)
