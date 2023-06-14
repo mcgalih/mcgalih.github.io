@@ -146,14 +146,51 @@ main {
 }
 
 .head-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-left: 15px;
 }
 
 .content-about {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+}
+
+.head_content_about {
+	font-size: 1.2rem;
+	font-weight: bold;
+	width: fit-content;
+	border-bottom: 2px dotted #5c5b5b;
+	padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.item_content_about {
+	margin: 10px 0;
+	line-height: 1.6;
+	font-size: 0.85rem;
+}
+
+.item_content_about > span, span.course{
+    color: #707070;
+}
+
+.item_content_about > span{
+    display: inline-block;
+}
+
+.item_content_about > span.title, span.course{
+    display: block;
+}
+
+.item_content_about > span.course{
+    font-style: italic;
+}
+
+.item_content_about > span.title{
+    color: #272727;
+    font-family: PlusJakartaSans-bold;
 }
 
 @media screen and (min-width: 768px) {
@@ -181,9 +218,13 @@ main {
     .summary {
         font-size: 1.2rem;
     }
+
+    .item_content_about {
+        font-size: 1rem;
+    }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1100px) {
     #navbar_menus {
         margin-right: 10vw;
     }
@@ -195,5 +236,12 @@ main {
         border: 1px solid #272727;
         border-radius: 40px;
     }
+    
+    .content-about {
+        flex-direction: row;
+    }
 
+    .edu_courses, .work {
+        width: 47%;
+    }
 }
