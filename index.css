@@ -8,6 +8,10 @@
     src: url('font/PlusJakartaSans-Bold.ttf');
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 b { font-family: PlusJakartaSans-bold; }
 
 body {
@@ -82,7 +86,6 @@ main {
 .hamb_line::after{
     top: -8px;
 }
-
 
 #navbar_menus {
     display: none;
@@ -184,13 +187,13 @@ main {
     display: block;
 }
 
-.item_content_about > span.course{
-    font-style: italic;
-}
-
 .item_content_about > span.title{
     color: #272727;
     font-family: PlusJakartaSans-bold;
+}
+
+.item_content_about > span.course{
+    font-style: italic;
 }
 
 @media screen and (min-width: 768px) {
@@ -208,11 +211,19 @@ main {
         justify-content: space-between;
     }
 
+    .logo {
+        margin-left: 6vw;
+    }
+
     #navbar_menus {
         display: flex;
         flex-direction: row;
         background-color: white;
         margin-right: 6vw;
+    }
+
+    #navbar_menus > a {
+        padding: 20px 15px;
     }
 
     .summary {
@@ -241,7 +252,7 @@ main {
         flex-direction: row;
     }
 
-    .edu_courses, .work {
+    .edu_courses, .courses {
         width: 47%;
     }
 }
