@@ -196,6 +196,11 @@ main {
     font-style: italic;
 }
 
+.icon_skill {
+    margin: 5px 3px;
+    width: 30px;
+}
+
 @media screen and (min-width: 768px) {
     .hamb_icon {
         display: none;
@@ -219,11 +224,7 @@ main {
         display: flex;
         flex-direction: row;
         background-color: white;
-        margin-right: 6vw;
-    }
-
-    #navbar_menus > a {
-        padding: 20px 15px;
+        margin-right: 10vw;
     }
 
     .summary {
@@ -252,7 +253,7 @@ main {
         flex-direction: row;
     }
 
-    .edu_courses, .courses {
+    .edu_courses, .skills {
         width: 47%;
     }
 }
