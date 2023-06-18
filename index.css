@@ -201,6 +201,44 @@ main {
     width: 30px;
 }
 
+.content_contact {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-size: 0.85rem;
+    font-family: PlusJakartaSans-bold;
+}
+
+.content_contact > #getintouch {
+    margin-bottom: 15px;
+}
+
+.item_content_contact {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.icon_contact {
+    margin-right: 20px;
+    width: 40px;
+}
+
+.item_content_contact > a {
+    text-decoration: none;
+    color: #272727;
+}
+
+.item_content_contact > a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.item_content_contact > #icon_link {
+    width: 0.85rem;
+}
+
 @media screen and (min-width: 768px) {
     .hamb_icon {
         display: none;
@@ -233,6 +271,18 @@ main {
 
     .item_content_about {
         font-size: 1rem;
+    }
+
+    .content_contact {
+        font-size: 1rem;
+    }
+
+    .item_content_contact > #icon_link {
+        width: 1rem;
+    }
+
+    .icon_contact {
+        width: 50px;
     }
 }
 
