@@ -244,10 +244,12 @@ main {
 
 .timeline {
     width: 100%;
+    margin-top: 30px;
+    padding-left: 30px;
 }
 
 /* vertical line */
-.timeline > ul > li {
+.timeline > .ruler {
     list-style-type: none;
     position: relative;
     width: 6px;
@@ -257,12 +259,12 @@ main {
 }
 
 /* first vertical line */
-.timeline > ul > li:first-child {
+.timeline > .ruler:first-child {
     padding-top: 0;
 }
 
 /* circle */
-.timeline > ul > li::after {
+.timeline > .ruler::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -276,12 +278,11 @@ main {
 }
 
 /* first circle */
-.timeline > ul > li:first-child:after {
+.timeline > .ruler:first-child:after {
     top: -5px;
 }
 
-
-.timeline > ul > li > .isitimeline {
+.timeline > .ruler > .isitimeline {
     position: relative;
     bottom: 0;
     padding: 10px;
@@ -292,7 +293,7 @@ main {
 }
 
 /* triangle */
-.timeline > ul > li > .isitimeline::before {
+.timeline > .ruler > .isitimeline::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -305,7 +306,7 @@ main {
 }
 
 /* first triangle */
-.timeline > ul > li:first-child > .isitimeline::before {
+.timeline > .ruler:first-child > .isitimeline::before {
     top: 0;
 }
 
