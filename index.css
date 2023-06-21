@@ -245,73 +245,68 @@ main {
 .timeline {
     width: 100%;
     margin-top: 30px;
-    padding-left: 30px;
 }
 
-/* vertical line */
-.timeline > .ruler {
-    list-style-type: none;
+.timeline_item {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Vertical line */
+.timeline_item > .ruler {
+    box-sizing: content-box;
     position: relative;
+    margin-left: 20px;
     width: 6px;
-    margin: 0;
+    height: auto;
     background: #FFC83D;
-    padding-top: 30px;
 }
 
-.timeline > .ruler:first-child {
-    padding-top: 0;
+/* last vertical line item */
+.timeline_item:last-child > .ruler {
+    background: transparent;
 }
 
-/* circle */
-.timeline > .ruler::after {
+/* Circle */
+.timeline_item > .ruler::after {
     content: '';
     position: absolute;
+    top: -5px;
     left: 50%;
-    top: 30px;
     transform: translateX(-50%);
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    background: #FFC83D;
+    border: 5px solid #FFC83D;
+    background: white;
     z-index: 1;
 }
 
-/* first circle */
-.timeline > .ruler:first-child:after {
-    top: -5px;
-}
-
-/* last circle */
-.timeline > .ruler:last-child:after {
-    top: calc(100% - 25px);
-}
-
-.timeline > .ruler > .isitimeline {
+.timeline_item > .content {
+    width: 75%;
     position: relative;
-    bottom: 0;
-    padding: 10px;
-    width: fit-content;
+    margin-bottom: 30px; /* gap */
     border: 5px solid #FFC83D;
     border-radius: 5px;
-    left: 40px;
+    left: 30px;
 }
 
-/* triangle */
-.timeline > .ruler > .isitimeline::before {
+/* last content item */
+.timeline_item:last-child > .content {
+    margin-bottom: 0;
+}
+
+/* Triangle */
+.timeline_item > .content::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -5px;
     width: 0;
     height: 0;
     border-style: solid;
     left: -20px;
     border-width: 8px 20px 8px 0;
     border-color: transparent #FFC83D transparent transparent;
-}
-
-/* first triangle */
-.timeline > .ruler:last-child > .isitimeline::before {
-    top: calc(100% - 15px);
 }
 
 @media screen and (min-width: 768px) {
