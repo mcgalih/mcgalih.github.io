@@ -243,7 +243,6 @@ main {
 }
 
 .timeline {
-    width: 100%;
     margin-top: 30px;
 }
 
@@ -353,6 +352,10 @@ main {
 
     .icon_contact {
         width: 50px;
+    }
+    
+    .timeline_item > .content {
+        max-width: 460px;
     }
 }
 
