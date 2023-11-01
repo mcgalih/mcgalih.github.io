@@ -336,6 +336,36 @@ main {
     padding: 5px 10px 10px 10px;
 }
 
+@media screen and (max-width: 420px) {
+    .timeline_item {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .timeline_item > .ruler {
+        margin-left: 0;
+        height: 35px;
+    }
+
+    .timeline_item > .ruler::after {
+        content: none;
+    }
+    
+    .timeline_item > .content {
+        width: 90%;
+        margin-bottom: 0;
+        left: 0;
+    }
+
+    .timeline_item > .content::before {
+        content: none;
+    }
+
+    .timeline_item:last-child > .ruler {
+        height: 0;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .hamb_icon {
         display: none;
