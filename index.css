@@ -243,7 +243,7 @@ main {
 }
 
 .timeline {
-    margin-top: 30px;
+    margin: 30px 10% 0;
 }
 
 .timeline_item {
@@ -255,7 +255,6 @@ main {
 .timeline_item > .ruler {
     box-sizing: content-box;
     position: relative;
-    margin-left: 20px;
     width: 6px;
     height: auto;
     background: #FFC83D;
@@ -283,7 +282,7 @@ main {
 
 .timeline_item > .content {
     font-size: 0.85rem;
-    width: 75%;
+    width: 85%;
     position: relative;
     margin-bottom: 30px; /* gap */
     border: 5px solid #FFC83D;
@@ -337,6 +336,10 @@ main {
 }
 
 @media screen and (max-width: 420px) {
+    .timeline {
+        margin: 30px 0 0;
+    }
+
     .timeline_item {
         flex-direction: column-reverse;
         align-items: center;
@@ -414,7 +417,7 @@ main {
     
     .timeline_item > .content {
         font-size: 1rem;
-        max-width: 500px;
+        width: 90%;
     }
 }
 
