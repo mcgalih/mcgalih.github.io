@@ -8,6 +8,15 @@
     src: url('font/PlusJakartaSans-Bold.ttf');
 }
 
+:root {
+    --orange : #FFC83D;
+    --black : #272727;
+    --gray: #5c5b5b;
+    --gray-light: #707070;
+    --font-bold: PlusJakartaSans-bold;
+    --font-reg: PlusJakartaSans-reg;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -16,12 +25,12 @@ html {
     scroll-behavior: smooth;
 }
 
-b { font-family: PlusJakartaSans-bold; }
+b { font-family: var(--font-bold); }
 
 body {
     margin: 0;
-    font-family: PlusJakartaSans-reg;
-    color: #272727;
+    font-family: var(--font-reg);
+    color: var(--black);
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -36,6 +45,27 @@ main {
     padding: 0 10%;
 }
 
+.head-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gray);
+}
+
+.emoji{
+    margin: 0;
+    font-size: 2rem;
+}
+
+.head-title {
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+
+/*=========================NAVBAR============================ 
+===========================================================*/
 .navbar {
     z-index: 10;
     width: 100%;
@@ -51,7 +81,7 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #272727;
+    border-bottom: 1px solid var(--black);
 }
 
 .logo {
@@ -68,14 +98,14 @@ main {
 }
 
 .hamb_line {
-    background-color: #272727;
+    background-color: var(--black);
     display: block;
     height: 3px;
     position: relative;
     width: 24px;
 }
 .hamb_line::before, .hamb_line::after{
-    background-color: #272727;
+    background-color: var(--black);
     content: '';
     display: block;
     height: 100%;
@@ -99,13 +129,15 @@ main {
 #navbar_menus > a {
     padding: 20px;
     text-decoration: none;
-    color: #272727;
+    color: var(--black);
 }
 
 #navbar_menus > a:hover {
-    background-color: #FFC83D;
+    background-color: var(--orange);
 }
 
+/*==========================HOME============================= 
+===========================================================*/
 #home {
     margin-top: 100px;
     display: flex;
@@ -113,27 +145,22 @@ main {
     align-items: center;
 }
 
-.emoji{
-    margin: 0;
-    font-size: 2rem;
-}
-
 .hello {
     width: fit-content;
-    border-bottom: 2px dashed #5c5b5b;
+    border-bottom: 2px dashed var(--gray);
     padding-bottom: 13px;
 }
 
 .summary {
-    color: #707070;
+    color: var(--gray-light);
     text-align: left;
     margin-bottom: 30px;
 }
 
 .cv {
     text-decoration: none;
-    background-color: #FFC83D;
-    color: #272727;
+    background-color: var(--orange);
+    color: var(--black);
     border-radius: 10px;
     padding: 10px;
 }
@@ -142,20 +169,8 @@ main {
     display: none;
 }
 
-.head-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 40px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #5c5b5b;
-}
-
-.head-title {
-    font-size: 1.5rem;
-    margin-left: 15px;
-}
-
+/*=========================ABOUT============================= 
+===========================================================*/
 .content-about {
 	width: 100%;
 	display: flex;
@@ -167,7 +182,7 @@ main {
 	font-size: 1.2rem;
 	font-weight: bold;
 	width: fit-content;
-	border-bottom: 2px dotted #5c5b5b;
+	border-bottom: 2px dotted var(--gray);
 	padding-bottom: 5px;
     margin-top: 20px;
 }
@@ -179,7 +194,7 @@ main {
 }
 
 .item_content_about > span, span.course{
-    color: #707070;
+    color: var(--gray-light);
 }
 
 .item_content_about > span{
@@ -191,7 +206,7 @@ main {
 }
 
 .item_content_about > span.title{
-    color: #272727;
+    color: var(--black);
     font-family: PlusJakartaSans-bold;
 }
 
@@ -204,6 +219,118 @@ main {
     width: 30px;
 }
 
+/*=======================EXPERIENCE========================== 
+===========================================================*/
+.timeline {
+    margin: 30px 10% 0;
+}
+
+.timeline_item {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Vertical line */
+.timeline_item > .ruler {
+    box-sizing: content-box;
+    position: relative;
+    width: 6px;
+    height: auto;
+    background: var(--orange);
+}
+
+/* last vertical line item */
+.timeline_item:last-child > .ruler {
+    background: transparent;
+}
+
+/* Circle */
+.timeline_item > .ruler::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 5px solid var(--orange);
+    background: white;
+    z-index: 1;
+}
+
+.timeline_item > .content {
+    font-size: 0.85rem;
+    width: 85%;
+    position: relative;
+    margin-bottom: 30px; /* gap */
+    border: 5px solid var(--orange);
+    border-radius: 6px;
+    left: 30px;
+}
+
+/* last content item */
+.timeline_item:last-child > .content {
+    margin-bottom: 0;
+}
+
+/* Triangle */
+.timeline_item > .content::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    left: -20px;
+    border-width: 8px 20px 8px 0;
+    border-color: transparent var(--orange) transparent transparent;
+}
+
+.job_date {
+    padding: 0px 10px 2px 10px;
+    background: var(--orange);
+    color: white;
+    font-family: PlusJakartaSans-bold;
+}
+
+.job_name {
+    padding: 5px 10px 5px 10px;
+    border-bottom: 2px dashed var(--orange);
+    font-family: PlusJakartaSans-bold;
+}
+
+.job_location {
+    padding: 5px 10px 5px 10px;
+    color: var(--gray-light);
+}
+
+.job_desc > ul {
+    margin: 0;
+    padding-left: 15px;
+}
+
+.job_desc {
+    padding: 5px 10px 10px 10px;
+}
+
+/*=========================PROJECT=========================== 
+===========================================================*/
+.project {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 350px;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    border: 1px solid black;
+}
+
+/*========================CONTACT============================ 
+===========================================================*/
 .content_contact {
     width: 100%;
     margin-top: 30px;
@@ -230,7 +357,7 @@ main {
 
 .item_content_contact > a {
     text-decoration: none;
-    color: #272727;
+    color: var(--black);
 }
 
 .item_content_contact > a:hover {
@@ -242,98 +369,8 @@ main {
     width: 0.85rem;
 }
 
-.timeline {
-    margin: 30px 10% 0;
-}
-
-.timeline_item {
-    display: flex;
-    flex-direction: row;
-}
-
-/* Vertical line */
-.timeline_item > .ruler {
-    box-sizing: content-box;
-    position: relative;
-    width: 6px;
-    height: auto;
-    background: #FFC83D;
-}
-
-/* last vertical line item */
-.timeline_item:last-child > .ruler {
-    background: transparent;
-}
-
-/* Circle */
-.timeline_item > .ruler::after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 5px solid #FFC83D;
-    background: white;
-    z-index: 1;
-}
-
-.timeline_item > .content {
-    font-size: 0.85rem;
-    width: 85%;
-    position: relative;
-    margin-bottom: 30px; /* gap */
-    border: 5px solid #FFC83D;
-    border-radius: 6px;
-    left: 30px;
-}
-
-/* last content item */
-.timeline_item:last-child > .content {
-    margin-bottom: 0;
-}
-
-/* Triangle */
-.timeline_item > .content::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    left: -20px;
-    border-width: 8px 20px 8px 0;
-    border-color: transparent #FFC83D transparent transparent;
-}
-
-.job_date {
-    padding: 0px 10px 2px 10px;
-    background: #FFC83D;
-    color: white;
-    font-family: PlusJakartaSans-bold;
-}
-
-.job_name {
-    padding: 5px 10px 5px 10px;
-    border-bottom: 2px dashed #FFC83D;
-    font-family: PlusJakartaSans-bold;
-}
-
-.job_location {
-    padding: 5px 10px 5px 10px;
-    color: #707070;
-}
-
-.job_desc > ul {
-    margin: 0;
-    padding-left: 15px;
-}
-
-.job_desc {
-    padding: 5px 10px 10px 10px;
-}
+/*======================MEDIA QUERY========================== 
+===========================================================*/
 
 @media screen and (max-width: 576px) {
     .timeline {
@@ -380,7 +417,7 @@ main {
 
     .navbar {
         flex-direction: row;
-        border-bottom: 1px solid #272727;
+        border-bottom: 1px solid var(--black);
         justify-content: space-between;
     }
 
@@ -433,7 +470,7 @@ main {
         display: block;
         width: 360px;
         margin-left: 8%;
-        border: 1px solid #272727;
+        border: 1px solid var(--black);
         border-radius: 40px;
     }
     
