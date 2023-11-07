@@ -222,15 +222,13 @@ main {
 /*=======================EXPERIENCE========================== 
 ===========================================================*/
 .timeline {
-    margin: 30px 10% 0;
-    /* margin: 30px 0 0; */
+    margin: 30px 0 0;
 }
 
 .timeline_item {
     display: flex;
-    flex-direction: row;
-    /* flex-direction: column-reverse;
-    align-items: center; */
+    flex-direction: column-reverse;
+    align-items: center;
 }
 
 /* Vertical line */
@@ -238,70 +236,28 @@ main {
     box-sizing: content-box;
     position: relative;
     width: 6px;
-    height: auto;
-    background: var(--orange);
-    /* 
-    margin-left: 0;
     height: 35px;
-    */
+    background: var(--orange);
+    margin-left: 0;
 }
 
 /* last vertical line item */
 .timeline_item:last-child > .ruler {
     background: transparent;
-    /* height: 0; */
-}
-
-/* Circle */
-.timeline_item > .ruler::after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 5px solid var(--orange);
-    background: white;
-    z-index: 1;
-    /* 
-    content: none;
-    */
+    height: 0;
 }
 
 .timeline_item > .content {
     font-size: 0.85rem;
-    width: 85%;
+    width: 100%;
     position: relative;
-    margin-bottom: 30px; /* gap */
     border: 5px solid var(--orange);
     border-radius: 6px;
-    left: 30px;
-    /* 
-    width: 90%;
-    margin-bottom: 0;
-    left: 0;
-    */
 }
 
 /* last content item */
 .timeline_item:last-child > .content {
     margin-bottom: 0;
-}
-
-/* Triangle */
-.timeline_item > .content::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    left: -20px;
-    border-width: 8px 20px 8px 0;
-    border-color: transparent var(--orange) transparent transparent;
-    /* content: none; */
 }
 
 .job_date {
@@ -419,37 +375,57 @@ main {
 /*======================MEDIA QUERY========================== 
 ===========================================================*/
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 577px) {
     .timeline {
-        margin: 30px 0 0;
-    }
-
-    .timeline_item {
-        flex-direction: column-reverse;
-        align-items: center;
+        margin: 30px 10% 0;
     }
     
-    .timeline_item > .ruler {
-        margin-left: 0;
-        height: 35px;
+    .timeline_item {
+        flex-direction: row;
+        align-items: stretch;
     }
-
+    
+    /* Vertical line */
+    .timeline_item > .ruler {
+        height: auto;
+    }
+    
+    /* last vertical line item */
+    .timeline_item:last-child > .ruler {
+        background: transparent;
+    }
+    
+    /* Circle */
     .timeline_item > .ruler::after {
-        content: none;
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 5px solid var(--orange);
+        background: white;
+        z-index: 1;
     }
     
     .timeline_item > .content {
-        width: 90%;
-        margin-bottom: 0;
-        left: 0;
+        margin-bottom: 30px; /* gap */
+        left: 30px;
     }
-
+    
+    /* Triangle */
     .timeline_item > .content::before {
-        content: none;
-    }
-
-    .timeline_item:last-child > .ruler {
+        content: '';
+        position: absolute;
+        top: -5px;
+        width: 0;
         height: 0;
+        border-style: solid;
+        left: -20px;
+        border-width: 8px 20px 8px 0;
+        border-color: transparent var(--orange) transparent transparent;
     }
 }
 
@@ -495,13 +471,12 @@ main {
         width: 1rem;
     }
 
-    .icon_contact {
-        width: 50px;
-    }
-    
     .timeline_item > .content {
         font-size: 1rem;
-        width: 90%;
+    }
+
+    .icon_contact {
+        width: 50px;
     }
 
     .project {
