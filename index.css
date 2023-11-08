@@ -17,13 +17,9 @@
     --font-reg: PlusJakartaSans-reg;
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box;}
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth;}
 
 b { font-family: var(--font-bold); }
 
@@ -327,9 +323,15 @@ main {
     width: fit-content;
 }
 
-.proj-gambar {
+.proj-img {
     width: 100%;
-    padding: 35px 35px 0;
+    padding: 5% 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.proj-img-file {
+    width: 80%;
 }
 
 /*========================CONTACT============================ 
@@ -414,7 +416,7 @@ main {
         margin-bottom: 30px; /* gap */
         left: 30px;
     }
-    
+
     /* Triangle */
     .timeline_item > .content::before {
         content: '';
@@ -426,6 +428,11 @@ main {
         left: -20px;
         border-width: 8px 20px 8px 0;
         border-color: transparent var(--orange) transparent transparent;
+    }
+
+    .project {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 }
 
@@ -480,9 +487,19 @@ main {
     }
 
     .project {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-        
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .proj-title {
+        font-size: 1.2rem;
+    }
+    .proj-desc{
+        font-size: 1rem;
+    }
+
+    .proj-link {
+        font-size: 0.8rem;
     }
 }
 
@@ -512,5 +529,7 @@ main {
 
     .project {
         gap: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
     }
 }
