@@ -466,6 +466,11 @@ main {
         font-size: 1.2rem;
     }
 
+    .content-about {
+        flex-direction: row;
+        justify-content:space-around;
+    }
+
     .item_content_about {
         font-size: 1rem;
     }
@@ -517,10 +522,6 @@ main {
         margin-left: 8%;
         border: 1px solid var(--black);
         border-radius: 40px;
-    }
-    
-    .content-about {
-        flex-direction: row;
     }
 
     .edu_courses, .skills {
