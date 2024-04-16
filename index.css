@@ -523,9 +523,7 @@ main {
     .myphoto {
         display: block;
         width: 360px;
-        margin-left: 8%;
-        border: 1px solid var(--black);
-        border-radius: 40px;
+        margin-left: 5%;
     }
 
     .edu_courses, .skills {
