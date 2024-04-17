@@ -140,17 +140,19 @@ main {
 #home {
     margin-top: 100px;
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
     align-items: center;
 }
 
 .hello {
     width: fit-content;
+    font-size: 1.5rem;
     border-bottom: 2px dashed var(--gray);
     padding-bottom: 13px;
 }
 
 .summary {
+    font-size: 1rem;
     color: var(--gray-light);
     text-align: left;
     margin-bottom: 30px;
@@ -165,7 +167,10 @@ main {
 }
 
 .myphoto {
-    display: none;
+    display: block;
+    width: 270px;
+    margin-left: 3%;
+    margin-top: 30px;
 }
 
 /*=========================ABOUT============================= 
@@ -466,8 +471,12 @@ main {
         margin-right: 6vw;
     }
 
-    .summary {
-        font-size: 1.2rem;
+    #home {
+        flex-direction:row;
+    }
+
+    .myphoto{
+        margin-top: 0px;
     }
 
     .content-about {
@@ -516,12 +525,20 @@ main {
     .logo {
         margin-left: 10vw;
     }
+
     #navbar_menus {
         margin-right: 10vw;
     }
 
+    .hello {
+        font-size: 2rem;
+    }
+
+    .summary {
+        font-size: 1.2rem;
+    }
+
     .myphoto {
-        display: block;
         width: 360px;
         margin-left: 5%;
     }
